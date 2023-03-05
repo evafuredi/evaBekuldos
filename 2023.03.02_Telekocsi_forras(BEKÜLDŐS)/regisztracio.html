@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telekocsi.css">
+    <title>Telekocsi</title>
+</head>
+<body>
+    <div class="tartalom">
+        <h1 >Telekocsi</h1>
+
+        <div class="menu">
+            
+            <ul>
+               <a href="telekocsi.html" ><li>Bemutatkozás</li></a>
+                <li>Sofőröknek</li>
+                <li>Utasoknak</li>
+                <li>Bejelentkezés</li>
+                <li>Regisztráció!</li>
+              </ul>
+        </div>
+
+        <h2>Regisztráció</h2>
+       <form>
+        <table>
+            <tr>
+                <td>Név:</td>
+                <td><input type="text" placeholder="" required pattern="[A-ZÁÉÍÓÖŐÚÜŰ]{1}[a-záéíóöőúüű]{1,}\s[A-ZÁÉÍÓÖŐÚÜŰ]{1}[a-záéíóöőúüű]{1,}"></td>
+            </tr>
+
+            <tr>
+                <td>E-mail cím:</td>
+                <td><input type="email" placeholder="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Jelszó:</td>
+                <td><input type="password" id="jelszo1" placeholder="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
+            </tr>
+
+            <tr>
+                <td>Jelszó ismét:</td>
+                <td><input type="password" id="jelszo2" placeholder="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="submit" id="ellenorzes"value="Mentés"></td>
+            </tr>
+        
+        </table>
+                
+      </form>
+      
+
+</div>
+
+   <script>
+    ellenorzes.addEventListener("click",JelszoEllenorzes);
+    function JelszoEllenorzes(){
+        let password1=document.querySelector("#jelszo1").value;
+        let password2=document.querySelector("#jelszo2").value;
+    
+        if(password1=="" && password2==""){
+            alert("A jelszók kitöltése kötlező")
+        }
+
+        else if(password1==""){
+            alert("Az jelszó mező kitöltése kötlező")
+        }
+
+        else if(password2==""){
+            alert("Az jelszó ismét mező kitöltése kötelező")
+        }
+
+        else if(password1!=password2){
+            alert("A két jelszó nem egyezik")
+        }
+
+        else if(password1.length<8){
+            alert("Legalább 8 karakter szükséges")
+        }
+
+        else if(password1.search(/[a-z]/)==-1){
+            alert("Legalább 1 kisbetű szükséges")
+        }
+
+        else if(password1.search(/[A-Z]/)==-1){
+            alert("Legalább 1 nagybetű szükséges")
+        }
+        else if(password1.search(/[!\@\#\$\%\&\*(\)\_\-\+\=\<\,\.\>\?]/)==-1){
+            alert("Legalább 1 speciális karakter szükséges")
+        }
+
+        else{
+            alert("Sikeres regisztráció")
+        }
+    }
+   </script> 
+</body>
+</html>
