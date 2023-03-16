@@ -10,43 +10,23 @@
 
     <script>
 
-function MaxParos(alsoHatar, felsoHatar){
-            let also;
-            let felso;
-            if(alsoHatar<felsoHatar){
-            also=alsoHatar;
-            felso=felsoHatar;
-            }
-            else{
+         
+         function MaxParos(vizsgaltTomb){
             
-            also=felsoHatar;
-            felso=alsoHatar;
+            let max = vizsgaltTomb[0];
+            for(let i=1; i<vizsgaltTomb.length; i++)
+            {  
+                if(vizsgaltTomb[i]%2==0)
+                {
+                    max=vizsgaltTomb[i];
+                }
             }
-            let generaltSzam=(Math.round(Math.random()*felso-also))+also;
-            return generaltSzam;
+            return max;
         }
 
-        function TombGenerator(tombMeret, legkissebbErtek, legnagyobbErtek){
-            let genaraltTomb=[];
-            for(let i=0; i<tombMeret;i++)
-            {
-                genaraltTomb.push(Rn(legkissebbErtek,legnagyobbErtek));
-            }
-            return genaraltTomb;
-        }
-        // Tömb kiírató
-
-        function TombKiirato(kiirandoTomb, elnevezes){
-            document.write(`<br>A ${elnevezes} tömb elemei: `)
-            for(let i=0; i<kiirandoTomb.length;i++)
-            {
-              document.write(kiirandoTomb[i]+", ");
-            }
-        }
-
-        let ujTomb=TombGenerator(12,3,7,19,21);
-        TombKiirato(ujTomb,"Generált Tömb");
-
+        document.write("<br> A Vizsgált tömb max páros eredménye: "+MaxParos([12,3,7,19,21]));
+        document.write("<br> A Vizsgált tömb max páros eredménye: "+MaxParos([28,14,2,42,69]));
+        document.write("<br> A Vizsgált tömb max páros eredménye: "+MaxParos([32,21,54,33,21]));
         
     </script>
     
