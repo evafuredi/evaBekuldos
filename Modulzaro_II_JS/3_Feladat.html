@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Érték</title>
+</head>
+<body>
+    <script>
+
+function PhErtek(vizsgaltErtek){
+    
+let=vizsgaltErtek;
+
+if(vizsgaltErtek==7){
+    return ("Semleges");
+}
+
+else if(vizsgaltErtek<=6){
+    return ("Savas");
+}
+
+else if(vizsgaltErtek>=8){
+    return ("Lúgos");
+}
+
+}
+function Kiirato(szoveg){
+            document.write(szoveg);
+        }
+    
+        Kiirato("<br>Ph Értek: " +PhErtek(9));
+        Kiirato("<br>Ph Értek: "+PhErtek(5.5));
+        Kiirato("<br>Ph Értek: "+PhErtek(7));
+        
+</script>
+</body>
+</html>

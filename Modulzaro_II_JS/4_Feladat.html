@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElsőN Szám</title>
+</head>
+<body>
+    <script>
+        function ElsoNSzamOsszege(szamokMennyisége){
+            let szamErtek =ElsoNSzamOsszege
+            if(szamokMennyisége>0){
+                return szamokMennyisége+ElsoNSzamOsszege(szamokMennyisége-1);
+            }
+            else{
+                return szamokMennyisége;
+            }
+           
+        }
+        document.write("ElsoSzamErtek: "+ElsoNSzamOsszege(3)+"<br>");
+        document.write("ElsoSzamErtek: "+ElsoNSzamOsszege(10)+"<br>");
+        document.write(" ElsoSzamErtek:"+ElsoNSzamOsszege(21));
+        
+    </script>
+    
+</body>
+</html>

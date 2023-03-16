@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Páros</title>
+</head>
+<body>
+
+    <script>
+
+function MaxParos(alsoHatar, felsoHatar){
+            let also;
+            let felso;
+            if(alsoHatar<felsoHatar){
+            also=alsoHatar;
+            felso=felsoHatar;
+            }
+            else{
+            
+            also=felsoHatar;
+            felso=alsoHatar;
+            }
+            let generaltSzam=(Math.round(Math.random()*felso-also))+also;
+            return generaltSzam;
+        }
+
+        function TombGenerator(tombMeret, legkissebbErtek, legnagyobbErtek){
+            let genaraltTomb=[];
+            for(let i=0; i<tombMeret;i++)
+            {
+                genaraltTomb.push(Rn(legkissebbErtek,legnagyobbErtek));
+            }
+            return genaraltTomb;
+        }
+        // Tömb kiírató
+
+        function TombKiirato(kiirandoTomb, elnevezes){
+            document.write(`<br>A ${elnevezes} tömb elemei: `)
+            for(let i=0; i<kiirandoTomb.length;i++)
+            {
+              document.write(kiirandoTomb[i]+", ");
+            }
+        }
+
+        let ujTomb=TombGenerator(12,3,7,19,21);
+        TombKiirato(ujTomb,"Generált Tömb");
+
+        
+    </script>
+    
+</body>
+</html>

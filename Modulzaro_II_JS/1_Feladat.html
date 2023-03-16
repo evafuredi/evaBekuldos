@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kocka Felszín</title>
+</head>
+<body>
+
+    <script>
+        function KockaFelszin(a){
+        let felszin = (Number(a)*Number(a))*6;
+        return felszin;
+    
+        document.write(`A ${a} kocka felszínének mérete : ${felszin}<br>`);
+       
+        }
+        document.write("A kocka felszín mérete: "+KockaFelszin(2)+"<br>");
+        document.write("A kocka felszín mérete: "+KockaFelszin(3)+"<br>");
+        document.write("A kocka felszín mérete: "+KockaFelszin(5));
+       
+        
+            </script>
+    
+</body>
+</html>

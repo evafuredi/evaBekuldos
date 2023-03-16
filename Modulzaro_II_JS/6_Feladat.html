@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magánhangzó kereső</title>
+</head>
+<body>
+
+    <script>
+     function MaganHangzokSzama(vizsgaltSzoveg){
+	return szoveg = vizsgaltSzoveg.replace(/[aáeéiíoóöőuúüű]/gi, "");
+    }   
+       document.write("A vizsgálandó szöveg, hogy vane-e benne magánhangzó:")
+       document.write("<br>"+MaganHangzokSzama("A vizsgálandó szöveg, hogy vane_e benne magánhangzó"));
+
+
+        
+    </script>
+    
+</body>
+</html>
