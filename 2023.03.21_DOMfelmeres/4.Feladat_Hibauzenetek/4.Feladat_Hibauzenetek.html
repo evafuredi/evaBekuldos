@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibaüzenetek</title>
+</head>
+<body>
+<div id="uzenetHelye">Üzenet helye</div>
+        <table>
+            <tr>
+                <td>E-mail cím:</td>
+                <td><input type="email" id="email1"></td>
+            </tr>
+
+            <tr>
+                <td>E-mail cím megerősítése:</td>
+                <td><input type="email" id="email2"></td>
+            </tr>
+
+           
+            <tr>
+                <td><button type="button" id="ellenorzes">E-mail címek ellenőrzése</button></td>
+            </tr>
+
+        </table>
+
+
+</div>
+
+   <script>
+    
+     function ervenyesEmail(emailVizsgalat){
+        let helyesKitoltes=/^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$/i;
+        if(helyesKitoltes.test(emailVizsgalat)==true)
+        {
+            return true
+        }
+        else 
+        {
+            return false
+        }
+     }
+
+     ellenorzes.addEventListener("click",emailEllenorzes);
+
+     function emailEllenorzes(){
+        let emailCim1=document.querySelector("#email1").value;
+        let emailCim2=document.querySelector("#email2").value;
+        let uzenoFelulet=document.querySelector("#uzenetHelye")
+        uzenoFelulet.style.backgroundColor="red"
+
+        if(emailCim1=="" && emailCim2==""){
+           uzenoFelulet.innerHTML="Nincs kitölve egyik mező sem!";
+        }
+
+        else if(emailCim1==""){
+            uzenoFelulet.innerHTML="Nincs kitöltve az e-mail mező!";
+        }
+
+        else if(emailCim2==""){
+            uzenoFelulet.innerHTML="Nincs kitöltve az e-mail megerősítése mező!";
+        }
+
+    
+        else if(!ervenyesEmail(emailCim1)){
+            uzenoFelulet.innerHTML="Nem megfelelő az e-mail cím formátuma!";
+        }
+
+        else if(emailCim1!=emailCim2){
+            uzenoFelulet.innerHTML="A két mező tartalma nem egyezik!";
+        }
+
+
+        else{
+            uzenoFelulet.innerHTML="Adatok rögítése sikeres";
+            uzenoFelulet.style.backgroundColor="green"
+        }
+    }
+   </script> 
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bújócska</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .column{
+          float: left;
+          padding: 5px;
+         
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+            
+        }
+        @keyframes IttACica {
+            from {
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @keyframes HolACica {
+            from {
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        @keyframes IttAzEger {
+            from {
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes HolAzEger {
+            from {
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+button{
+    color: darkorchid;
+}
+
+#cicaKep{
+            width: 300px;
+            height: 300px;
+            animation-name: "IttAcica";
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+        #egerKep{
+        
+            width: 300px;
+            height: 300px;
+            animation-name: "IttAzEger";
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column"> 
+         <img src="cica.jpeg" alt="Itt a cicca - Hol az egér" title="Itt a cicca - Hol az egér" id="cicaKep">
+      </div>
+      
+      <div class="column">
+        <img src="eger.jpeg" alt="Itt az egér - Hol a cica" title="Itt az egér - Hol a cica" id="egerKep">
+     </div>
+      </div>
+
+     <div>
+        <button type="button" id="cicaGomb">Itt a cica - Hol az egér</button>
+    </div>
+
+
+    
+      
+
+    <script>
+
+        cicaGomb.addEventListener("click", cicaAnimacio);
+        function cicaAnimacio(){
+            let allapot =document.querySelector("#cicaKep").style.animationName;
+            if(allapot!= "HolACica")
+            {
+                document.querySelector("#cicaKep").style.animationName="HolACica"
+            }
+
+            else{
+                document.querySelector("#cicaKep").style.animationName="IttACica"
+            }
+        }
+
+
+        cicaGomb.addEventListener("click", egerAnimacio);
+        function egerAnimacio(){
+            let allapot =document.querySelector("#egerKep").style.animationName;
+            if(allapot!= "IttAzEger")
+            {
+                document.querySelector("#egerKep").style.animationName="IttAzEger"
+            }
+
+            else{
+                document.querySelector("#egerKep").style.animationName="HolAzEger"
+            }
+        }
+    </script>
+    
+</body>
+</html>

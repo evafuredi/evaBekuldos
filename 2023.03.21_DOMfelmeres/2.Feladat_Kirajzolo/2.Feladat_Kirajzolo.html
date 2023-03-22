@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirajzoló</title>
+    <style>
+
+       #negyzet{
+        width: 100px;
+        height: 100px;
+        box-shadow: 3px 3px 10px black;
+        margin: auto;
+        display: flex;
+        position: relative;
+        background-image: url(program.jpg);
+        background-size: cover;
+        }
+        
+     
+        .borderimg{
+            border: 40px solid;
+            border-image-source: url('frame.png');
+            border-image-slice: 300;
+            border-image-repeat: round;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <label for="xkoordinata">Szélesség</label>
+    <input type="number" id="xHosszusag" value="100"><br>
+
+    <label for="ykoordinata">Magasság</label>
+    <input type="number" id="yHosszusag" value="100"><br>
+
+    <button type="button" id="kirajzoloGomb">Kirajzol</button><br>
+    <div id="negyzet" class="borderimg"></div>
+
+    <script>
+        
+        kirajzoloGomb.addEventListener("click", kirajzolo);
+        function kirajzolo(){
+            let szelesseg = document.querySelector("#xHosszusag").value
+            let magassag = document.querySelector("#yHosszusag").value
+            let modositandoObjectum = document.querySelector("#negyzet");
+            modositandoObjectum.style.width = szelesseg + "px";
+            modositandoObjectum.style.height = magassag + "px";
+        }
+    </script>
+    
+</body>
+</html>

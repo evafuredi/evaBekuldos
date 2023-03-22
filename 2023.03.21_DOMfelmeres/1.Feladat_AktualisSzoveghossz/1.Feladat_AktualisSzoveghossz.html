@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktuális szöveghossz</title>
+    <link rel="stylesheet" type="text/css" href="aktualis.css" />
+</head>
+<body>
+    
+   <div class="container">
+    <h1>Karakter számláló - Felhasználható karakterszám</h1>
+    <h1>Szöveg Másoló</h1>
+    <h1>Helyesírás javítás</h1>
+    <textarea onkeyup="szamlalo()" placeholder="Ide írd a szöveget...." id="" cols="30" rows="10"></textarea>
+    <p id="kozep">Összes karakter: <span id="karakterszam">0</span></p>
+    <p>Felhasználható karakter mennyisége: <span id="maradek">1000</span></p>
+    <button id="copyText">Másolás</button>
+   </div>
+
+<script type="text/javascript" src="pspell.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    
+</body>
+</html>
