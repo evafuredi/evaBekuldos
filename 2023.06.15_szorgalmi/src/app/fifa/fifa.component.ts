@@ -1,0 +1,136 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-fifa',
+  templateUrl: './fifa.component.html',
+  styleUrls: ['./fifa.component.css']
+})
+export class FIFAComponent {
+  csapatAdat = [{
+    csapat:"Anglia",
+    helyezes:4,
+    valtozas:0,
+    pontszam:1662,
+  },
+  {
+    csapat:"Argentína",
+    helyezes:10,
+    valtozas:0,
+    pontszam:1614,
+  },
+  {
+    csapat:"Belgium",
+    helyezes:1,
+    valtozas:0,
+    pontszam:1572,
+  },
+  {
+    csapat:"Brazília",
+    helyezes:3,
+    valtozas:-1,
+    pontszam:1719,
+  },
+  {
+    csapat:"Chile",
+    helyezes:17,
+    valtozas:-3,
+    pontszam:1576,
+  },
+  {
+    csapat:"Dánia",
+    helyezes:10,
+    valtozas:-1,
+    pontszam:1584,
+  },
+  {
+    csapat:"Franciaország",
+    helyezes:2,
+    valtozas:1,
+    pontszam:1725,
+  },
+  {
+    csapat:"Hollandia",
+    helyezes:13,
+    valtozas:3,
+    pontszam:1586,
+  },
+  {
+    csapat:"Horvátország",
+    helyezes:8,
+    valtozas:-1,
+    pontszam:1625,
+  },
+  {
+    csapat:"Kolumbia",
+    helyezes:9,
+    valtozas:-1,
+    pontszam:1622,
+  },
+  {
+    csapat:"Mexikó",
+    helyezes:12,
+    valtozas:0,
+    pontszam:1603,
+  },
+  {
+    csapat:"Németország",
+    helyezes:16,
+    valtozas:-1,
+    pontszam:1580,
+  },
+  {
+    csapat:"Olaszország",
+    helyezes:15,
+    valtozas:1,
+    pontszam:1583,
+  },
+  {
+    csapat:"Peru",
+    helyezes:19,
+    valtozas:0,
+    pontszam:1550,
+  },
+  {
+    csapat: "Portugália",
+    helyezes:5,
+    valtozas:1,
+    pontszam:1643,
+  },
+  {
+    csapat:"Spanyolország",
+    helyezes:7,
+    valtozas:2,
+    pontszam:1631,
+  },
+  {
+    csapat:"Svájc",
+    helyezes:11,
+    valtozas:0,
+    pontszam:1604,
+  },
+  {
+    csapat: "Svédország",
+    helyezes:18,
+    valtozas:1,
+    pontszam:1560,
+  },
+  {
+    csapat:"Szenegál",
+    helyezes:20,
+    valtozas:0,
+    pontszam:1546,
+  },
+  {
+    csapat:"Uruguay;6;-1;1639",
+    helyezes:6,
+    valtozas:-1,
+    pontszam:1639,
+  },
+  ]}
+
+  export interface fifaAdat{
+  csapat:string;
+  helyezes:number;
+  valtozas:number;
+  pontszam:number;
+}

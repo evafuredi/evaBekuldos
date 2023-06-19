@@ -1,0 +1,29 @@
+<h2 style="color: blue;">EURÓPAI UNIÓ ADAT TÁBLÁZAT</h2>
+
+<table class="table table-sm table-hover table-striped table-info">
+  <thead>
+    <tr class="table-primary">
+      <th>
+        ORSZÁG NEVE
+      </th>
+      <th>
+        ORSZÁG CSATLAKOZÁSI ÉVE
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let euAdatok of EuropaiUnio">
+      <td>
+        {{euAdatok.orszag}}
+      </td>
+
+      <td>
+        {{euAdatok.csatlakozas}}
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>

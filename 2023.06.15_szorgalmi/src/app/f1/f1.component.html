@@ -1,0 +1,22 @@
+<h2>PILOTA ADAT TÁBLÁZAT</h2>
+<table class="table table-sm table-hover table-striped table-warning">
+  <thead>
+    <tr class=" table-light">
+      <th>NÉV</th>
+      <th>ÖSZZPONT</th>
+      <th>ELSŐ HELYZÉSEK SZÁMA</th>
+      <th>POLE POSITION</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let verseny of pilotaAdat">
+      <td>{{verseny.nev}}</td>
+      <td>{{verseny.osszpont}}</td>
+      <td>{{verseny.elsoHelyezesekSzama}}</td>
+      <td>{{verseny.polePosition}}</td>
+    </tr>
+  </tbody>
+
+</table>
+

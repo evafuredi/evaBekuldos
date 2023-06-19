@@ -1,0 +1,26 @@
+<h2>SNOOKER ADAT TÁBLÁZAT</h2>
+
+<table class="table table-sm table-danger table-striped table-hover">
+  <thead>
+    <tr class="table-dark">
+      <th>HELYEZÉS</th>
+      <th>NÉV</th>
+      <th>ORSZÁG</th>
+      <th>NYEREMÉNY</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let snooker of snookerInfo">
+      <td>{{snooker.helyezes}}</td>
+      <td>{{snooker.nev}}</td>
+      <td>{{snooker.orszag}}</td>
+      <td>{{snooker.nyeremeny}}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+
+

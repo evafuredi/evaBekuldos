@@ -1,0 +1,20 @@
+<h2>FIFA ADAT TÁBLÁZAT</h2>
+<table class="table table-sm table-striped table-hover table-success">
+  <thead>
+    <tr class="table-dark">
+      <th>CSAPAT NÉVE</th>
+      <th>HELYEZÉS</th>
+      <th>JAVÍTÁS</th>
+      <th>ELÉRT PONTSZÁM</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let fifaAdat of csapatAdat">
+      <td>{{fifaAdat.csapat}}</td>
+      <td>{{fifaAdat.helyezes}}</td>
+      <td>{{fifaAdat.valtozas}}</td>
+      <td>{{fifaAdat.pontszam}}</td>
+    </tr>
+  </tbody>
+</table>
