@@ -1,0 +1,16 @@
+<h2>Angulár modul megoldása</h2>
+
+<label for="sulyMezo">Add meg a súlyod kilogrammban:</label>
+<input type="number" class="form-control" id="sulyMezo" [(ngModel)]="suly">
+
+<label for="magassagMezo">Add meg a magasságod méterben:</label>
+<input type="number" class="form-control" id="magassagMezo" [(ngModel)]="magassag">
+
+<button type="button" class="btn btn-success form-control" (click)="EredmenyMentes()">Eredmény mentése</button>
+
+<p>A megadott érték alapján a testtömeg index: {{suly/(magassag*magassag)}}</p>
+
+<ul>
+  <li *ngFor="let lista of eredmeny">{{lista}}</li>
+</ul>
+
