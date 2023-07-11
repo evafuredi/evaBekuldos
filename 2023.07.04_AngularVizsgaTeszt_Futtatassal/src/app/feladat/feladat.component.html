@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1>Vizsgafeladat</h1>
+
+  <label for="ertekMezo">Vizsgálandó szám</label>
+  <input type="number" class="form-control" id="ertekMezo" [(ngModel)]="vizsgaltSzam">
+
+  <button type="button" class="btn btn-primary form-control" (click)="EredmenyMentes()">Eredmény mentése</button>
+
+  </div>
+
+  <p>A(z) {{vizsgaltSzam}}: {{this.EredmenyKiiro()}}</p>
+
+  <ul>
+    <li *ngFor="let eredmeny of eredmenyListazo">{{eredmeny}}</li>
+  </ul>
